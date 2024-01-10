@@ -1,0 +1,128 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EAECEE; /* Soft white/light gray background */
+    color: #333333; /* Dark gray text */
+}
+
+header {
+    background-color: #2B3A67; /* Deep blue for the header */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #5C7D9F; /* Light blue for the navigation bar */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #4A90E2; /* Brighter blue for hover effects */
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#about {
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.project-title, .project-description {
+    position: relative;
+    z-index: 2;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color: #2B3A67; /* Deep blue for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Updated CSS for Contact Section */
+.contact-info {
+    margin-top: 20px;
+}
+
+.social-links i {
+    font-size: 40px;
+    margin: 0 10px;
+    color: #333333; /* Dark gray for icons, adjust if needed */
+}
+
+.social-links a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+
