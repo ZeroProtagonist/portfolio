@@ -48,12 +48,32 @@ section {
 }
 
 .projects-grid {
-    margin-top: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Four columns by default */
+    gap: 20px; /* Space between grid items both horizontally and vertically */
     padding: 20px;
 }
+
+/* Adjust for medium screens: two rows of two cards */
+@media screen and (max-width: 800px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Maintain gap in two-column layout */
+    }
+}
+
+/* Adjust for smaller screens: single column layout */
+@media screen and (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .project-card {
+        margin-bottom: 20px; /* Adjust this value as needed */
+        width: 100%; /* Ensure full width is used */
+    }
+}
+
 
 .project-card {
     background-size: cover;
@@ -62,13 +82,14 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 80%;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-bottom: 20px;
 }
 
 .project-title, .project-description {
