@@ -1,16 +1,21 @@
 // script.js
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        navLinks.classList.remove('open');
     });
 });
-
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message sent!');
-});
-
