@@ -114,13 +114,28 @@ function buildEpisodeCard(title, pubDate, audioUrl, duration) {
     return card;
 }
 
+async function fetchRSS() {
+    const direct = 'https://www.klcc.org/podcast/the-klcc-conundrum/rss.xml';
+    const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(direct)}`;
+
+    try {
+        const res = await fetch(direct);
+        if (res.ok) return res.text();
+    } catch (e) {
+        // Likely a CORS block — fall through to proxy
+    }
+
+    const res = await fetch(proxy);
+    if (!res.ok) throw new Error('RSS fetch failed via proxy');
+    const json = await res.json();
+    return json.contents;
+}
+
 async function loadConundrum() {
     const container = document.getElementById('conundrum-episodes');
 
     try {
-        const res = await fetch('https://www.klcc.org/podcast/the-klcc-conundrum/rss.xml');
-        if (!res.ok) throw new Error('RSS fetch failed');
-        const text = await res.text();
+        const text = await fetchRSS();
 
         const parser = new DOMParser();
         const xml = parser.parseFromString(text, 'text/xml');
