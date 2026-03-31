@@ -234,6 +234,25 @@ body::after {
     margin-bottom: 40px;
 }
 
+.section-desc a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.section-desc a:hover {
+    color: var(--blue-hover);
+}
+
+.section--dark .section-desc a {
+    color: var(--blue-hover);
+}
+
+.section--dark .section-desc a:hover {
+    color: #5580C4;
+}
+
 /* ---- EYE 5 EMBED ---- */
 .embed-block {
     margin-bottom: 32px;
