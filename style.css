@@ -16,6 +16,7 @@
     --text-paper: #F2EDE3;
     --muted: #5A5A5A;
     --muted-dark: #888888;
+    --muted-light: #808080;
     --border-light: #D5CFC4;
     --rule: 3px solid #111111;
 }
@@ -136,7 +137,7 @@ body::after {
 .hero-eyebrow {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
-    color: var(--blue-hover);
+    color: var(--text-paper);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 20px;
@@ -172,7 +173,7 @@ body::after {
 }
 
 .section--dark .section-tag {
-    color: var(--blue-dark-bg);
+    color: var(--text-paper);
     border-color: var(--blue);
 }
 
@@ -185,8 +186,8 @@ body::after {
 }
 
 .section--dark .more-link {
-    color: var(--blue-hover);
-    border-color: var(--blue);
+    color: var(--blue-dark-bg);
+    border-color: var(--blue-dark-bg);
 }
 
 .section--dark .more-link:hover {
@@ -341,7 +342,7 @@ body::after {
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--blue-dark-bg);
+    color: var(--muted-light);
     display: block;
     margin-bottom: 6px;
 }
@@ -399,7 +400,7 @@ body::after {
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--blue-dark-bg);
+    color: var(--text-paper);
     margin-bottom: 32px;
 }
 
@@ -451,7 +452,7 @@ body::after {
 .footer-copy {
     font-family: 'Space Mono', monospace;
     font-size: 0.68rem;
-    color: #808080;
+    color: var(--muted-light);
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
