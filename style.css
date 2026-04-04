@@ -11,6 +11,7 @@
     --dark: #111111;
     --blue: #1B3F72;
     --blue-hover: #26529A;
+    --blue-dark-bg: #6B93D6;
     --text: #111111;
     --text-paper: #F2EDE3;
     --muted: #5A5A5A;
@@ -171,7 +172,7 @@ body::after {
 }
 
 .section--dark .section-tag {
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
     border-color: var(--blue);
 }
 
@@ -246,11 +247,11 @@ body::after {
 }
 
 .section--dark .section-desc a {
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
 }
 
 .section--dark .section-desc a:hover {
-    color: #5580C4;
+    color: var(--blue-dark-bg);
 }
 
 /* ---- EYE 5 EMBED ---- */
@@ -340,7 +341,7 @@ body::after {
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
     display: block;
     margin-bottom: 6px;
 }
@@ -398,7 +399,7 @@ body::after {
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
     margin-bottom: 32px;
 }
 
@@ -425,7 +426,7 @@ body::after {
 }
 
 .contact-item:hover {
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
 }
 
 .contact-key {
@@ -439,7 +440,7 @@ body::after {
 }
 
 .contact-item:hover .contact-key {
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
 }
 
 .contact-val {
@@ -450,7 +451,7 @@ body::after {
 .footer-copy {
     font-family: 'Space Mono', monospace;
     font-size: 0.68rem;
-    color: rgba(255, 255, 255, 0.18);
+    color: #808080;
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
