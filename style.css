@@ -136,7 +136,7 @@ body::after {
 .hero-eyebrow {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
-    color: var(--blue-hover);
+    color: var(--blue-dark-bg);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 20px;
@@ -185,8 +185,8 @@ body::after {
 }
 
 .section--dark .more-link {
-    color: var(--blue-hover);
-    border-color: var(--blue);
+    color: var(--blue-dark-bg);
+    border-color: var(--blue-dark-bg);
 }
 
 .section--dark .more-link:hover {
