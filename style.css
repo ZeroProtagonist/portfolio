@@ -137,7 +137,7 @@ body::after {
 .hero-eyebrow {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
-    color: var(--text-paper);
+    color: var(--muted-dark);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 20px;
